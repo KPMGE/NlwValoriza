@@ -19,6 +19,9 @@ export class User {
   email: string;
 
   @Column()
+  password: string;
+
+  @Column()
   admin: boolean;
 
   @CreateDateColumn()
@@ -29,7 +32,7 @@ export class User {
 
   constructor() {
     if (!this.id) {
-      this.id =  uuid();
+      this.id = uuid();
     }
   }
 }

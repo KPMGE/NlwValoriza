@@ -13,7 +13,7 @@ app.use(
   (error: Error, request: Request, response: Response, next: NextFunction) => {
     if (error instanceof Error) {
       return response.status(400).json({
-        error: error.message,
+        message: error.message,
       });
     }
 
